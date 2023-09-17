@@ -12,7 +12,7 @@ const router = require('./routes/index');
 
 app.use('/', router);
 
-db.sequelize.sync({force:true}).then(()=>{
+db.sequelize.sync({force:false}).then(()=>{
     app.listen(PORT, ()=>{
         console.log(`http://localhost:${PORT}`);
     })
